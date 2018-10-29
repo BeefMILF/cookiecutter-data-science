@@ -26,7 +26,7 @@ $ conda install cookiecutter
 ### To start a new project, run:
 ------------
 
-    cookiecutter https://github.com/maklux/cookiecutter-data-science
+    cookiecutter https://github.com/maknotavailable/cookiecutter-data-science
 
 
 [![asciicast](https://asciinema.org/a/9bgl5qh17wlop4xyxu9n9wr02.png)](https://asciinema.org/a/9bgl5qh17wlop4xyxu9n9wr02)
@@ -78,3 +78,9 @@ The directory structure of your new project looks like this:
 ------------
 
     pip install -r requirements.txt
+
+### More information on customizing the cookiecutter template
+------------
+
+    First steps:
+    https://cookiecutter.readthedocs.io/en/latest/first_steps.html
