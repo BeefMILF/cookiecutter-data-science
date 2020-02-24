@@ -8,7 +8,7 @@ _A logical, reasonably standardized, but flexible project structure for doing an
 
 ### Requirements to use the cookiecutter template:
 -----------
- - Python 2.7 or 3.5+
+ - Python 3.5+
  - [Cookiecutter Python package](http://cookiecutter.readthedocs.org/en/latest/installation.html) >= 1.4.0: This can be installed with pip by or conda depending on how you manage your Python packages:
 
 ``` bash
@@ -41,15 +41,15 @@ The directory structure of your new project looks like this:
     ├── LICENSE
     ├── Makefile           <- Makefile with commands like `make data` or `make train`
     ├── README.md          <- The top-level README for developers using this project.
-    ├── data               <- Sample data. All other data should be stored in proj_local or cloud storage.
+    ├── assets             <- Version controlled assets, such as stopword lists. Training data should 
+    │                         be stored in local data directory, outside of repository. 
     │
     ├── docs               <- A default Sphinx project; see sphinx-doc.org for details
     │
     ├── models             <- Trained and serialized models, model predictions, or model summaries
     │
-    ├── notebooks          <- Jupyter notebooks. Naming convention is a number (for ordering),
-    │                         the creator's initials, and a short `-` delimited description, e.g.
-    │                         `1.0-jqp-initial-data-exploration`.
+    ├── notebooks          <- Jupyter notebooks. Naming convention is <[Task]-[Short Description]>,
+    │                         for example 'Data - Exploration'
     │
     ├── reports            <- Generated analysis as HTML, PDF, LaTeX, etc.
     │
@@ -60,17 +60,13 @@ The directory structure of your new project looks like this:
     ├── code               <- Source code for use in this project.
     │   ├── __init__.py    <- Makes code a Python module
     │   │
-    │   ├── data           <- Scripts to download or generate data
-    │   │   └── make_dataset.py
+    │   ├── main.py        <- Main file, later used for inference
     │   │
-    │   ├── features       <- Scripts to turn raw data into features for modeling
+    │   ├── helper.py      <- Use case agnostic helper file, with common functions
     │   │   └── build_features.py
-    │   │
-    │   └──  models         <- Scripts to train models and then use trained models to make
-    │       │                 predictions
-    │       ├── predict_model.py
-    │       └── train_model.py
     │
+    ├── tests              <- Source code for use in this project.
+    │   └── test_main.py   <- Test for the main function
     └── tox.ini            <- tox file with settings for running tox; see https://tox.readthedocs.io/
 ```
 
